@@ -5,12 +5,12 @@ In production Now
 Waveform data classifier using convolutional neural network.
 
 ## Usage
-train
+train example
 ~~~
 python train_waveform_classfy.py
 ~~~
 
-predict
+predict example
 ~~~
 python predict_waveform_classfy.py
 ~~~
