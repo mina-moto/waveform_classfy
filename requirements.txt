@@ -1,0 +1,9 @@
+certifi==2018.10.15
+chainer==5.0.0
+filelock==3.0.10
+numpy==1.15.4
+protobuf==3.6.1
+scikit-learn==0.20.0
+scipy==1.1.0
+six==1.11.0
+sklearn==0.0

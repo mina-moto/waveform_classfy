@@ -16,6 +16,8 @@ python predict_waveform_classfy.py
 ~~~
 
 ## Requirement
-
+~~~
+pip install -r requirements.txt
+~~~
 ## License
-MIT
+This software is released under the MIT License, see LICENSE.

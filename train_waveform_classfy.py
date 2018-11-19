@@ -38,7 +38,7 @@ def preprocess(train_name):
     data_raw = open(train_name)#csvデータを文字列変換
     csv_file=csv.reader(data_raw,delimiter=",",lineterminator="\r\n")#csvのリストとして読む
     for line in csv_file:#csvの各行ごと処理
-        input_data.append(line[:-1])
+        input_data.append(line[:-1])#最後の要素は除く
         teach.append(line[-1])#lineの最後の要素，正解データラベル
     input_data=xp.array(input_data, dtype=xp.float32)#chainerで扱うために変換
     teach=xp.array(teach,dtype=xp.int32)
@@ -62,7 +62,6 @@ if __name__ == '__main__':
     optimizer.setup(model)# modelのパラメータをoptimizerにセット
     if(args.gpu>=0):
         use_gpu(model,args.gpu)
-    frequency=1#途中経過lossを学習何回ごとに表示するか
     input_data,teach=preprocess(args.train_name)#学習データ
     # train_epoch回学習を繰り返す
     for i in range(1,args.train_epoch+1):
